@@ -4,7 +4,8 @@ alert();
 
 alert({
 	type: `success`,
-	msg: `All done!`
+	msg: `Everything Finished!`,
+	name: `DONE`
 });
 
 alert({
@@ -14,7 +15,8 @@ alert({
 
 alert({
 	type: `info`,
-	msg: `You're awesome!`
+	msg: `You're awesome!`,
+	name: `REMEMBER`
 });
 
 alert({

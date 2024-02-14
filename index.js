@@ -22,24 +22,26 @@ const blueInverse = chalk.blue.bold.inverse;
 export default options => {
 	const defaultOptions = {
 		type: `error`,
-		msg: `You forgot to define all options.`
+		msg: `You forgot to define all options.`,
+		name: ``
 	};
 	const opts = {...defaultOptions, ...options};
-	const {type, msg} = opts;
+	const {type, msg, name} = opts;
+	const printName = name ? name : type.toUpperCase();
 
 	if (type === `success`) {
-		console.log(`\n${sym.success}  ${greenInverse(` SUCCESS `)} ${green(msg)}\n`);
+		console.log(`\n${sym.success}  ${greenInverse(` ${printName} `)} ${green(msg)}\n`);
 	}
 
 	if (type === `error`) {
-		console.log(`\n${sym.error}  ${redInverse(` ERROR `)} ${red(msg)}\n`);
+		console.log(`\n${sym.error}  ${redInverse(` ${printName} `)} ${red(msg)}\n`);
 	}
 
 	if (type === `warning`) {
-		console.log(`\n${sym.warning}  ${orangeInverse(` WARNING `)} ${orange(msg)}\n`);
+		console.log(`\n${sym.warning}  ${orangeInverse(` ${printName} `)} ${orange(msg)}\n`);
 	}
 
 	if (type === `info`) {
-		console.log(`\n${sym.success}  ${blueInverse(` INFO `)} ${blue(msg)}\n`);
+		console.log(`\n${sym.success}  ${blueInverse(` ${printName} `)} ${blue(msg)}\n`);
 	}
 };
