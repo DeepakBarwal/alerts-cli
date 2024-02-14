@@ -1,0 +1,32 @@
+{
+	"name": "alerts-cli",
+	"version": "0.0.1",
+	"description": "Cross platform CLI Alerts with colors & colored symbols success, info, warning, error. Works on macOS, Linux and Windows.",
+	"repository": "DeepakBarwal/alerts-cli",
+	"main": "index.js",
+	"scripts": {
+		"test": "node test.js",
+		"format": "prettier --write \"./**/*.{js,json}\""
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"alerts-cli",
+		"Deepak Barwal",
+		"deepakbarwal"
+	],
+	"author": {
+		"name": "Deepak Barwal",
+		"email": "deepakbarwal98@gmail.com",
+		"url": "https://www.linkedin.com/in/d-barwal/"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"prettier": "^3.2.5"
+	},
+	"dependencies": {
+		"chalk": "^5.3.0",
+		"log-symbols": "^6.0.0"
+	}
+}
